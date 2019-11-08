@@ -1,0 +1,15 @@
+<!--pages/shopList/shopList.wxml-->
+<view class="shop" wx:for="{{shopList}}">
+  <view style="display:flex; padding:5rpx 10rpx;">
+    <!-- 左侧图片 -->
+    <image style="flex:1;width:100%;height:240rpx;border-radius:5rpx;margin-right:10rpx;" src="{{item.images[0]}}"></image>
+    <!-- 右侧描述 -->
+    <view style="flex:2;color:#666;font-size:25rpx;display:flex;flex-direction:column;justify-content: space-between;" class="dsc">
+      <view style="font-weight:700;font-size:30rpx;">{{item.name}}</view>
+      <view>电话:{{item.phone}}</view>
+      <view>地址{{item.address}}</view>
+      <view>营业时间:{{item.businessHours}}</view>
+    </view>
+  </view>
+  <view style="background-color:#eee;height:7rpx;"></view>
+</view>

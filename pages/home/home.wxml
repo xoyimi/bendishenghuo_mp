@@ -1,0 +1,16 @@
+<!--pages/home/home.wxml-->
+<!-- banner 轮播图部分 -->
+<swiper indicator-dots autoplay circular interval="3000" >
+  <swiper-item wx:for="{{swiperList}}" wx:key="index">
+    <image src="{{item.image}}" ></image>
+  </swiper-item>
+ 
+</swiper>
+<!-- 九宫格部分 -->
+<view class="girds">
+  <navigator url="/pages/shopList/shopList?id={{item.id}}" class="girds-item" wx:for="{{girdsList}}" wx:key="index">
+    <image src="{{item.icon}}"></image>
+    <text>{{item.name}}</text>
+  </navigator>
+</view>
+
